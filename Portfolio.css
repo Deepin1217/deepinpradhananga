@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter;
+}
+
+@font-face {
+    font-family: inter;
+    src: url('./font/inter.ttf');
+}
+
+body{
+    font-family:inter;
+    width: 100%;
+    height:100%;
+    background: #0f0f0f;
+    color: rgb(218, 218, 218);
+}
+
+/* Navigation*/
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0f0f0f;
+    min-height: 10vh;
+}
+
+.logo{
+    color: rgb(218, 218, 218);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 24px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: rgb(218, 218, 218);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hamburger div{
+    width: 20px;
+    height: 2px;
+    margin: 3px;
+    background-color: rgb(218, 218, 218);
+}
+
+@media screen and (max-width:1000px) {
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+       position: absolute;
+       right: 0px;
+       height: 92vh;
+       top: 10vh;
+       background: #0f0f0f;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 100%;
+       transform: translate(100%);
+       transition: transform 1s ease-in;
+    }
+    .nav-links li{
+        opacity: 1;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opactiy: 1;
+        transform: translateX(0px);
+    }
+}
+
+.texthead{
+    font-weight: 100;
+    justify-content: center;
+    align-items: left;
+    margin-left: 100px;
+    width: 90%;
+}
+
+.texthead h1 {
+    font-size: 8vw;
+    line-height: 110%;
+}
+
+.texthead h2 {
+    font-size: 6vw;
+    line-height: 110%;
+}
+
+.wrapper {
+    /*This part is important for centering*/
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-top: 2rem;
+    margin-left: 110px;
+  }
+  
+  .typing-demo {
+    width:  30ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2vw;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+  .content{ 
+    padding: 10px;
+    display: flex;
+}
+
+.img-container{
+    float: left;
+    margin-left: 72px;
+    width: 80%;
+}
+
+.img-container img{
+    display: block;
+    width: 80%;
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+.resume-btn {
+    margin-top: 200px;
+    margin-right: 200px;
+    background-color: rgb(128, 30, 219);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-align: center;
+    text-justify: center;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 32px;
+    height: 72px;
+  }
+
+  .footer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .line{
+      margin-top: 20px;
+      width: 80%;
+      height: 2px;
+      background: rgba(218, 218, 218,0.5);
+  }
+
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 50px 20px;
+    border-radius: 100%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  
+.fa-instagram {
+    background: linear-gradient(#F58529,#DD2A7B,#515BD4);
+    color: white;
+  }
+
+.fa-behance{
+    background:#053eff;
+    color: white;
+}
